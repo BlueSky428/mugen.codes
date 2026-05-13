@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 
 import logo from "@/logo.png";
+import capaCloudLogo from "@/capacloud-logo.png";
 
 export function Footer() {
   return (
@@ -41,12 +42,29 @@ export function Footer() {
       </div>
 
       <div className="border-t border-border">
-        <div className="container-x py-6 text-xs font-mono text-muted-foreground space-y-2 md:flex md:items-center md:justify-between md:space-y-0">
-          <div>
-            <p>Mugen.Codes is a DBA of CAPACLOUD CORP</p>
-            <p>1309 Coffeen Avenue STE 1200, Sheridan, Wyoming 82801</p>
+        <div className="container-x py-6 text-xs font-mono text-muted-foreground md:flex md:items-start md:justify-between md:gap-8">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-3">
+            <a
+              href="https://capa.cloud"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 opacity-90 transition-opacity hover:opacity-100"
+              aria-label="CapaCloud (opens in new tab)"
+            >
+              <img
+                src={capaCloudLogo}
+                alt=""
+                width={50}
+                height={50}
+                className="h-10 w-10 object-contain"
+              />
+            </a>
+            <div className="space-y-2">
+              <p>Mugen.Codes is a DBA of CAPACLOUD CORP</p>
+              <p>1309 Coffeen Avenue STE 1200, Sheridan, Wyoming 82801</p>
+            </div>
           </div>
-          <p>© CapaCloud Corp 2026. All rights reserved.</p>
+          <p className="mt-4 shrink-0 md:mt-0">© CapaCloud Corp 2026. All rights reserved.</p>
         </div>
       </div>
     </footer>
